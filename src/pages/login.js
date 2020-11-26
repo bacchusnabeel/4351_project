@@ -1,6 +1,12 @@
 import React from "react";
 import LoginButton from "../Component/loginButton";
+import SignOutButton from "../Component/SignOutButton";
 
+function isSignedin(){
+  if(localStorage.role !== ""){
+      return <SignOutButton/>
+  }
+}
 
 function Login(props) {
   return (
@@ -22,7 +28,7 @@ function Login(props) {
           <LoginButton pathname="/techadmin" text="TECH_ADMIN"/>
         </div>
       
-      
+      {isSignedin()}
     </div>
   );
 }

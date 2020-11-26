@@ -1,12 +1,9 @@
-import { useEffect } from "react";
 import AdminLinks from "../Component/AdminLinks";
 import SignOutButton from "../Component/SignOutButton";
 
 
-
 function Admin(props){
 
-    useEffect(() => {window.onpopstate = e => {localStorage.setItem("role", "")}})
 
     if(localStorage.role === ""){
         return <div className="container">You Do Not Have Access</div>

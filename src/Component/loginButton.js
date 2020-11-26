@@ -8,6 +8,9 @@ function LoginButton({pathname, text}) {
     function setRole(){
         localStorage.setItem("role", text);
     }
+    if(text === localStorage.role){
+        return <div></div>;
+    }
 
     return (
       <div>
