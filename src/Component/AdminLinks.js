@@ -18,9 +18,9 @@ function AdminLinks({role}) {
     }
 
     return (
-      <div>
-          {myMap[myRole].map((link) => 
-            <div className="container">
+      <div className="columns">
+          {myMap[myRole].map((link, i) => 
+            <div className="column" key={i}>
                 <Link to={{pathname: link.split(" ").join("")}}>
                     {link}
                 </Link>

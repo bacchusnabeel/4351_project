@@ -4,6 +4,9 @@ import Login from "./pages/login";
 import Admin from "./pages/admin";
 
 function App() {
+  if(localStorage.getItem("role") == null){
+    localStorage.setItem("role", "");
+  }
   return (
     <div className="App">
       <Router>

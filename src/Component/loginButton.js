@@ -9,7 +9,13 @@ function LoginButton({pathname, text}) {
         localStorage.setItem("role", text);
     }
     if(text === localStorage.role){
-        return <div></div>;
+        return (
+            <div>
+                <Link to={{pathname: pathname}} onClick={setRole}>
+                    <button className="button is-link">Go To {text} Links</button>
+                </Link>
+            </div>
+        );
     }
 
     return (

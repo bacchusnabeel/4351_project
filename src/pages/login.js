@@ -10,25 +10,42 @@ function isSignedin(){
 
 function Login(props) {
   return (
-    <div className="tile container">
-      <div className="hero section">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            Select Roles:
-          </h1>
+    <div className="container">
+      <div className="tile section">
+        <div className="hero section">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">
+                Select A Role
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-        <div className="buttons section">
-          <LoginButton pathname="/admin" text="ADMIN"/>
-          <LoginButton pathname="/financeadmin" text="FINANCE_ADMIN"/>
-          <LoginButton pathname="/salesadmin" text="SALES_ADMIN"/>
-          <LoginButton pathname="/hradmin" text="HR_ADMIN"/>
-          <LoginButton pathname="/techadmin" text="TECH_ADMIN"/>
+      <div className="section container">
+        <div className="columns">
+          <div className="column">
+            <LoginButton pathname="/admin" text="ADMIN"/>
+          </div>
+          <div className="column">
+            <LoginButton pathname="/financeadmin" text="FINANCE_ADMIN"/>
+          </div>
+          <div className="column">
+            <LoginButton pathname="/salesadmin" text="SALES_ADMIN"/>
+          </div>
+          <div className="column">
+            <LoginButton pathname="/hradmin" text="HR_ADMIN"/>
+          </div>
+          <div className="column">
+            <LoginButton pathname="/techadmin" text="TECH_ADMIN"/>
+          </div>
         </div>
-      
-      {isSignedin()}
+        <div className="columns">
+          <div className="column">
+            {isSignedin()}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -10,23 +10,27 @@ function Admin(props){
     }
 
     return (
-      <div className="tile container">
+    <div>
+      <div className="tile section">
         <div className="hero section">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">
-              Select Link:
-            </h1>
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">
+                Select A Link
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-          <div className="buttons section">
-              <AdminLinks role={localStorage.role}/>
-          </div>
-          <div>
-              <SignOutButton/>
+      <div className="section container">
+        <AdminLinks role={localStorage.role}/>
+          <div className="columns">
+              <div className="column">
+                <SignOutButton/>
+              </div>
           </div>
       </div>
+    </div>
     );
   }
 
